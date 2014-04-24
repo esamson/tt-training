@@ -34,8 +34,8 @@ public class PropertyWidget extends WbdWidgetController
 	protected void init(WbdWidget instance) throws WbdException
 	{
 		instance.defineProperty(new WbdStringProperty("elementId", null, "Id", ""));
-//		instance.defineProperty(new WbdStringProperty("myProperty", null, "My Property", ""));
-//		instance.defineProperty(new WbdNavPointProperty("navpoint", null, "Navpoint", ""));
+		instance.defineProperty(new WbdStringProperty("label", null, "Label", "Label"));
+		instance.defineProperty(new WbdNavPointProperty("link", null, "Link", "Link"));
 	}
 	
 	@Override
@@ -135,11 +135,11 @@ public class PropertyWidget extends WbdWidgetController
 	}
 	
 	private SnippetParam[] getSnippetParams(WbdGenerator generator, WbdWidget instance, UimData ud) throws WbdException {
-//		String myProperty = instance.getProperty("myProperty", null);
-//		String myNavpoint = instance.getProperty("myNavpoint", null);
+		String label = instance.getProperty("label", null);
+		String link = instance.getProperty("link", null);
 		SnippetParam[] params = {
-//			new SnippetParam("myProperty", myProperty),
-//			new SnippetParam("myNavpoint", myNavpoint)
+			new SnippetParam("labelProp", label),
+			new SnippetParam("linkProp", link)
 		};
 		return params;
 	}

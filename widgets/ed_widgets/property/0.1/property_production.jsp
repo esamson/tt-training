@@ -24,26 +24,7 @@
 //	XData data = h.getData(jh);
 %>
 
-<!-- ********** INSERT HTML HERE ********** -->
-<div %%idDefinition%% class="Property" style="width:200px; border-style:solid; border-width:1px; text-align: center;">
-	property
-
-	<!-- Display an image 
-	<img src="%%URL(ed/images/myImage.png)%%"/>
-	 -->
-
-	<%-- Use a property
-	My Property = <%=snippetVar_myProperty%><br/>
-	--%>
-	
-	<%-- link to a navpoint, with automatic parameters added
-	<%
-	String nextPageUrl = RoutingUIM.navpointUrl(jh, snippetVar_myNavpoint, AutomaticUrlParametersMode.INSERT_AUTOMATIC_URL_PARAMETERS_NOW);
-	%>
-	<a href="+nextPageUrl+">next page</a>
-	--%>
-
-</div>
+<a href="%%linkProp%%">%%labelProp%%</a>
 
 <!--END-->
 </body>
