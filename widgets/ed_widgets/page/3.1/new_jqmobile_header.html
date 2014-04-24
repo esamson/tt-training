@@ -1,0 +1,43 @@
+<!--START--><!DOCTYPE html>
+<!-- page:new_jqmobile_header.jsp --> 
+%%importCode%%
+%%preFetchCode%%
+<html> 
+	<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="ToolTwist" />
+	<meta name="viewport" content="height=device-height,width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+<% if ( !"%%canonicalUrl%%".equals("")) { %> 
+	<link rel="canonical" href="%%canonicalUrl%%">
+<% } %>
+	<title>%%pageTitle%%</title>
+%%headerCode%%
+	<link rel="stylesheet" href="/ttsvr/tooltwist/frameworks/jquery.mobile-1.0a3/jquery.mobile-1.0a3.css" />
+	<script src="/ttsvr/tooltwist/frameworks/jquery-1.5.1/jquery-1.5.1.min.js"></script>
+	<!-- This must be placed before jquery.mobile
+	<script src="/ttsvr/tenam/scripts/tenam-pre-jquerymobile.js"></script>
+	 -->
+	<script src="/ttsvr/tooltwist/frameworks/jquery.mobile-1.0a3/jquery.mobile-1.0a3.min.js"></script>
+	
+
+<!-- ZZZZZZZZZZZZZZZZZZZZZZZZZZZ END -->
+</head> 
+<body> 
+%%topCode%%
+<div tooltwist-page-widget="%%pageWidget%%" tooltwist-navpoint-id="%%navpointId%%" data-role="page" data-theme="%%theme%%">
+<!--END-->	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Page content goes here.</p>		
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /header -->
+</div><!-- /page -->
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!--START--><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+%%importCode%%
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="%%descriptionMetatag%%">
+<meta name="keywords" content="%%keywordMetatag%%">
+<meta name="generator" content="ToolTwist" />
+<% if ( !"%%canonicalUrl%%".equals("")) { %> 
+<link rel="canonical" href="%%canonicalUrl%%">
+<% } %>
+<title>%%pageTitle%%</title>
+
+<!-- Prototype Jsp Header -->
+<script src="%%URL(tooltwist/frameworks/prototype-min-1.6.0.2/p-min.js)%%" type="text/javascript"></script>
+
+<link href="%%URL(tooltwist/wbd/wbd.css)%%" rel="stylesheet" type="text/css">
+%%headerCode%%
+
+<script type="text/javascript">
+function jmpUrl(url) {
+	window.location = encodeURI(url);
+	return false;
+}
+function jmpNavpoint(navpoint) 
+{
+	window.location = "%%URL(n/)%%" + encodeURIComponent(navpoint);
+	return false;
+}
+function jmpProduct(productId,seoBooster) {
+	var url = "%%URL(p/)%%";
+	if (seoBooster && seoBooster!="")
+		url += encodeURIComponent(seoBooster) + "/";
+	url += encodeURIComponent(productId);
+	window.location = url;
+	return false;
+}
+
+function resetSrch(qry)
+{
+//alert("resetSrch("+qry+")");
+	wbd_q = "";
+	wbd_n = "";
+	wbd_cc = "";
+	wbd_cn = "";
+	wbd_man = "";
+	wbd_prc = "";
+	wbd_x = "";
+	wbd_sfq = "";
+	wbd_dfq = "";
+	wbd_sbq = "";
+	wbd_pfq = "";
+	resetFlag = "1";
+}
+
+function jmpSrchFromHeader(qry)
+{
+	if (qry && qry!="" && qry!="Search MacMall")
+		return jmpSrch(qry)
+	else
+		return false;
+}
+
+
+function jmpSrch(qry) {
+	if (qry && qry!="" && qry!="Search MacMall")
+		wbd_q = qry;
+
+	var params = "";
+	if (wbd_q != "")
+		params +="&q="+encodeURIComponent(wbd_q);
+	if (wbd_n != "")
+		params +="&n="+encodeURIComponent(wbd_n);
+	if (wbd_cc != "")
+		params += "&cc="+encodeURIComponent(wbd_cc);
+	if (wbd_cn != "")
+		params += "&cn="+encodeURIComponent(wbd_cn);
+	if (wbd_man != "")
+		params += "&man="+encodeURIComponent(wbd_man);
+	if (wbd_prc != "")
+		params += "&prc="+encodeURIComponent(wbd_prc);
+	if (wbd_sfq != "")
+		params += "&sfq="+encodeURIComponent(wbd_sfq);
+	if (wbd_dfq != "")
+		params += "&dfq="+encodeURIComponent(wbd_dfq);
+	if (wbd_pfq != "")
+		params += "&pfq="+encodeURIComponent(wbd_pfq);
+	if (wbd_sbq != "")
+		params += "&sbq="+encodeURIComponent(wbd_sbq);	
+	if ($('removedProdDesc') && $('removedProdDesc').checked)
+		params += "&removedProdDesc=true";
+	if ($('shipOnlyFilter') && $('shipOnlyFilter').checked)
+		params += "&shipOnlyFilter=true";
+	if ($('removedLicenseFilter') && $('removedLicenseFilter').checked)
+		params += "&removedLicenseFilter=true";
+	if ($('licenseOnlyFilter') && $('licenseOnlyFilter').checked)
+		params += "&licenseOnlyFilter=true";
+
+	if ($('includeImage') && !$('includeImage').checked)
+		params += "&includeImage=false";
+	else
+		params += "&includeImage=true";
+		
+	if ($('refurbishedCondition') && $('refurbishedCondition').checked)
+		params += "&refurbishedCondition=true";
+	if ($('openBoxCondition') && $('openBoxCondition').checked)
+		params += "&openBoxCondition=true";
+	if ($('clearanceCondition') && $('clearanceCondition').checked)
+		params += "&clearanceCondition=true";
+		   
+	if (wbd_x != "")
+		params += "&"+wbd_x;<!-- not encoded, because it might contain multiple params --> 
+	var winLoc = window.location.pathname;
+	if (resetFlag=="1") {
+		winLoc = "%%URL(s)%%"
+	}
+	window.location = winLoc + "?rch" + params;
+	return false;
+}
+</script>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"  class="wbd body-production">
+%%topCode%%<!--END-->
+</body>
+</html>

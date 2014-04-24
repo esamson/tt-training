@@ -1,0 +1,5 @@
+<widget>
+  <widgetType>silent</widgetType>
+  <widgetClass>tooltwist.wbd.PageWidget</widgetClass>
+  <idWithinRootWidget>0</idWithinRootWidget>
+</widget>
