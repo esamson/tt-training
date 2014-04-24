@@ -3,4 +3,13 @@
   <idWithinRootWidget>0</idWithinRootWidget>
   <label>Hello World</label>
   <description>Hello World</description>
+  <editableSnippet>
+    <name>helloWorld_design.html</name>
+  </editableSnippet>
+  <editableSnippet>
+    <name>helloWorld_preview.html</name>
+  </editableSnippet>
+  <editableSnippet>
+    <name>helloWorld_production.jsp</name>
+  </editableSnippet>
 </widget>
