@@ -1,7 +1,7 @@
 <widget>
   <widgetType>template</widgetType>
   <widgetClass>tooltwist.wbd.PageWidget</widgetClass>
-  <linkedWidget>toolbox.page</linkedWidget>
+  <linkedWidget>ed.widget.page</linkedWidget>
   <idWithinRootWidget>0</idWithinRootWidget>
   <label>Web Page</label>
   <description>Regular, vanilla flavored web page.</description>
