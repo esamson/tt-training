@@ -1,0 +1,6 @@
+<widget>
+  <widgetClass>tooltwist.ed.widgets.PropertyWidget</widgetClass>
+  <idWithinRootWidget>0</idWithinRootWidget>
+  <label>Property Widget</label>
+  <description>Property Widget</description>
+</widget>
